@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "./main";
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  rpc Add (Input) returns (Result) {}
+  rpc Subtract (Input) returns (Result) {}
+  rpc Divide (Input) returns (Result) {}
+  rpc Multiply (Input) returns (Result) {}
+}
+
+message Input {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+// The response message containing the greetings
+message Result {
+  int32 res = 1;
+}
